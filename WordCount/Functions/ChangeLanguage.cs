@@ -6,15 +6,16 @@ using System.Resources;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+
 namespace WordCount.Functions
 {
     public class ChangeLanguage
     {
         public static void Language(string language)
         {
-            string defaultLanguage = "en";
-            //System.Configuration.ConfigurationManager.AppSettings["defaultLanguage"];
-            
+            string defaultLanguage = System.Configuration.ConfigurationManager.AppSettings["defaultLanguage"];
+
+
             if (defaultLanguage != "en" && defaultLanguage != "de")
             {
                 defaultLanguage = "en";

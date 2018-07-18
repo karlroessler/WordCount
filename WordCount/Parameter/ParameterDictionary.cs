@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace WordCount.Parameter
 {
-    public class IsDictionary
+    public class ParameterDictionary
     {
         public static string IsDictoneryPath(string[] args)
         {

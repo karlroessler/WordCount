@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WordCount.Parameter
 {
-    public class IsLang
+    public class ParameterLang
     {
         public static string IsLanguage(string[] args)
         {

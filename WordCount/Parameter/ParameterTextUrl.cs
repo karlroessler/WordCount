@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace WordCount.Parameter
 {
-    public class IsTextUrl
+    public class ParameterTextUrl
     {
         public static string IsTextUrlAdress(string[] args)
         {

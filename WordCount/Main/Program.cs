@@ -14,14 +14,14 @@ namespace WordCount
             List<ConsoleColor> colorlist = null;
 
             //Args auslesen
-            string language = Parameter.IsLang.IsLanguage(args);
-            string txtPath = Parameter.IsTXT.IsTXTAdress(args);
-            string urlPath = Parameter.IsTextUrl.IsTextUrlAdress(args);
-            bool index = Parameter.IsIndex.IsIndexTrue(args);
-            bool display = Parameter.IsDisplay.IsDisplayTrue(args);
-            bool help = Parameter.IsHelp.IsHelpTrue(args);
-            string dictionaryPath = Parameter.IsDictionary.IsDictoneryPath(args);
-            string stopWordPath = Parameter.IsStopwordlist.IsStopwordlistAdress(args);
+            string language = Parameter.ParameterLang.IsLanguage(args);
+            string txtPath = Parameter.ParameterTXT.IsTXTAdress(args);
+            string urlPath = Parameter.ParameterTextUrl.IsTextUrlAdress(args);
+            bool index = Parameter.ParameterIndex.IsIndexTrue(args);
+            bool display = Parameter.ParameterDisplay.IsDisplayTrue(args);
+            bool help = Parameter.ParameterHelp.IsHelpTrue(args);
+            string dictionaryPath = Parameter.ParameterDictionary.IsDictoneryPath(args);
+            string stopWordPath = Parameter.ParameterStopwordlist.IsStopwordlistAdress(args);
 
 
             //Function ausführen
@@ -37,7 +37,7 @@ namespace WordCount
                 sentence = Functions.ConvertListToString.ListToString(txtlist);
             }
             
-            sentence = InputConsole.Input(sentence);
+            sentence = Consol.ConsoleInput.Input(sentence);
             List<string> stopwordlist = Functions.ReadTXT.Read(stopWordPath);
             List<string> wordlist = Functions.SplitSentence.SentenceSplit(sentence);
 

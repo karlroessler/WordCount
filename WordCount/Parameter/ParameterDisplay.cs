@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WordCount.Parameter
 {
-    public class IsDisplay
+    public class ParameterDisplay
     {
         public static Boolean IsDisplayTrue(string[] args)
         {

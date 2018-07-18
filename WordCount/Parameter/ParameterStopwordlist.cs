@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace WordCount.Parameter
 {
-    public class IsStopwordlist
+    public class ParameterStopwordlist
     {
         public static string IsStopwordlistAdress(string[] args)
         {

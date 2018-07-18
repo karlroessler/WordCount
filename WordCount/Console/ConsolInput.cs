@@ -5,9 +5,9 @@ using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WordCount
+namespace WordCount.Consol
 {
-    class InputConsole
+    class ConsoleInput
     {
         public static string Input(string sentence)
         {

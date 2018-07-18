@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WordCount.Parameter
 {
-    public class IsHelp
+    public class ParameterHelp
     {
         public static Boolean IsHelpTrue(string[] args)
         {

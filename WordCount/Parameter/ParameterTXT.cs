@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace WordCount.Parameter
 {
-    public class IsTXT
+    public class ParameterTXT
     {
         public static string IsTXTAdress(string[] args)
         {
             string sentencePath = null;
             foreach (var arg in args)
             {
-                if (arg.EndsWith(".txt") == true && arg.StartsWith("-dictionary") == false && arg.StartsWith("-stopwordlist") == false && arg.StartsWith("-texturl") == false)
+                if (arg.EndsWith(".txt") == true && arg.StartsWith("-") == false)
                 {
                     if (File.Exists(arg))
                     {

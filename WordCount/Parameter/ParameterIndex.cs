@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WordCount.Parameter
 {
-    public class IsIndex
+    public class ParameterIndex
     {
         public static Boolean IsIndexTrue(string[] args)
         {

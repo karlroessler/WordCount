@@ -33,6 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -42,25 +43,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Consol\ConsolDisplayOutput.cs" />
+    <Compile Include="Console\ConsolDisplayOutput.cs" />
     <Compile Include="Functions\AverageWordLength.cs" />
     <Compile Include="Functions\ChangeLanguage.cs" />
     <Compile Include="Functions\ConvertListToString.cs" />
     <Compile Include="Functions\CountUniqueWords.cs" />
     <Compile Include="Functions\CountWords.cs" />
-    <Compile Include="Consol\ConsolInput.cs" />
-    <Compile Include="Consol\ConsolOutput.cs" />
+    <Compile Include="Console\ConsolInput.cs" />
+    <Compile Include="Console\ConsolOutput.cs" />
     <Compile Include="Functions\ReadTXT.cs" />
     <Compile Include="Functions\SortTextColor.cs" />
     <Compile Include="Main\Program.cs" />
-    <Compile Include="Parameter\IsDictionary.cs" />
-    <Compile Include="Parameter\IsDisplay.cs" />
-    <Compile Include="Parameter\IsHelp.cs" />
-    <Compile Include="Parameter\IsIndex.cs" />
-    <Compile Include="Parameter\IsLang.cs" />
-    <Compile Include="Parameter\IsStopwordlist.cs" />
-    <Compile Include="Parameter\IsTextUrl.cs" />
-    <Compile Include="Parameter\IsTXT.cs" />
+    <Compile Include="Parameter\ParameterDictionary.cs" />
+    <Compile Include="Parameter\ParameterDisplay.cs" />
+    <Compile Include="Parameter\ParameterHelp.cs" />
+    <Compile Include="Parameter\ParameterIndex.cs" />
+    <Compile Include="Parameter\ParameterLang.cs" />
+    <Compile Include="Parameter\ParameterStopwordlist.cs" />
+    <Compile Include="Parameter\ParameterTextUrl.cs" />
+    <Compile Include="Parameter\ParameterTXT.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Functions\RemoveSpecialCharacter.cs" />
     <Compile Include="Functions\RemoveStopWords.cs" />
