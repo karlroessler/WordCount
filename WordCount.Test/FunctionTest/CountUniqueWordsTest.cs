@@ -7,7 +7,7 @@ using Xunit;
 
 namespace WordCount.Test
 {
-    class CountUniqueWordsTest
+    public class CountUniqueWordsTest
     {
         [Fact]
         public void AllAreUnque()

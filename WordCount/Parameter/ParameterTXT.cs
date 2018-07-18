@@ -4,12 +4,13 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WordCount.Interfaces;
 
 namespace WordCount.Parameter
 {
-    public class ParameterTXT
+    public class ParameterTXT : IParameterTXT
     {
-        public static string IsTXTAdress(string[] args)
+        public string IsTXTAdress(string[] args)
         {
             string sentencePath = null;
             foreach (var arg in args)

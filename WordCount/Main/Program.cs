@@ -1,8 +1,11 @@
-﻿using System;
+﻿using Autofac;
+using System;
 using System.Collections.Generic;
+using System.IO.Abstractions;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WordCount.Implementations;
 
 namespace WordCount
 {
@@ -10,12 +13,15 @@ namespace WordCount
     {
         static void Main(string[] args)
         {
+            Container();
+
+
             string sentence = null;
             List<ConsoleColor> colorlist = null;
 
             //Args auslesen
             string language = Parameter.ParameterLang.IsLanguage(args);
-            string txtPath = Parameter.ParameterTXT.IsTXTAdress(args);
+            //string txtPath = Parameter.ParameterTXT.IsTXTAdress(args);
             string urlPath = Parameter.ParameterTextUrl.IsTextUrlAdress(args);
             bool index = Parameter.ParameterIndex.IsIndexTrue(args);
             bool display = Parameter.ParameterDisplay.IsDisplayTrue(args);
@@ -31,11 +37,11 @@ namespace WordCount
                 List<string> dictionarylist = Functions.ReadTXTDocument.Read(dictionaryPath);
             }
 
-            if (txtPath != null)
-            {
-                List<string> txtlist = Functions.ReadTXTDocument.Read(txtPath);
-                sentence = Functions.ConvertListToString.ListToString(txtlist);
-            }
+            //if (txtPath != null)
+            //{
+            //    List<string> txtlist = Functions.ReadTXTDocument.Read(txtPath);
+            //    sentence = Functions.ConvertListToString.ListToString(txtlist);
+            //}
             
             sentence = Consol.ConsoleInput.Input(sentence);
             List<string> stopwordlist = Functions.ReadTXTDocument.Read(stopWordPath);
@@ -69,6 +75,23 @@ namespace WordCount
             };
 
             Consol.ConsolOutput.TextAusgabe(variable);
+        }
+
+        private static void Container()
+        {
+            ContainerBuilder containerBuilder = new ContainerBuilder();
+            containerBuilder
+                .RegisterType<FileSystem>()
+                .As<IFileSystem>();
+
+            containerBuilder
+                .RegisterType<TextFileLoader>();
+
+            TextFileLoader system = containerBuilder
+                .Build()
+                .Resolve<TextFileLoader>();
+
+            string text = system.ReadAllText(@"C:\git\github\karlroessler\WordCount\WordCount\Test.txt");
         }
     }
 }
