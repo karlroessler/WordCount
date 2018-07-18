@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace WordCount.Functions
 {
-    public class ReadTXT
+    public class ReadTXTDocument
     {
         public static List<string> Read(string path)
         {

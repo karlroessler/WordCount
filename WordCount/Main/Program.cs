@@ -28,17 +28,17 @@ namespace WordCount
 
             if (dictionaryPath != null)
             {
-                List<string> dictionarylist = Functions.ReadTXT.Read(dictionaryPath);
+                List<string> dictionarylist = Functions.ReadTXTDocument.Read(dictionaryPath);
             }
 
             if (txtPath != null)
             {
-                List<string> txtlist = Functions.ReadTXT.Read(txtPath);
+                List<string> txtlist = Functions.ReadTXTDocument.Read(txtPath);
                 sentence = Functions.ConvertListToString.ListToString(txtlist);
             }
             
             sentence = Consol.ConsoleInput.Input(sentence);
-            List<string> stopwordlist = Functions.ReadTXT.Read(stopWordPath);
+            List<string> stopwordlist = Functions.ReadTXTDocument.Read(stopWordPath);
             List<string> wordlist = Functions.SplitSentence.SentenceSplit(sentence);
 
             if (display == true)

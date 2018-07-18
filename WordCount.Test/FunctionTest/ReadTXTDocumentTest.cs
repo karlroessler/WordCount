@@ -10,7 +10,7 @@ namespace WordCount.Test.FunctionTest
         [Fact]
         public void TestMethod1()
         {
-            string[] actual = Functions.ReadTXTDocument.ReadText(path: "test.txt" );
+            string[] actual = Functions.ReadTXTDocument.Read(path: "test.txt" ).ToArray();
             Assert.Equal(expected: new string[] {"a","about","above","after" }, actual: actual);
         }
     }
