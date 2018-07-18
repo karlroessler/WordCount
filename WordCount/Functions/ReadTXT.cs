@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace WordCount.Functions
 {
-    public class ReadTXTDocument
+    public class ReadTXT
     {
-        public static string[] ReadText(string path)
+        public static List<string> Read(string path)
         {
-            return File.ReadAllLines(path);
+            return File.ReadAllLines(path).ToList();
         }
     }
 }

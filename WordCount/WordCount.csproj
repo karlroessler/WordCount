@@ -42,13 +42,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Consol\ConsolDisplayOutput.cs" />
     <Compile Include="Functions\AverageWordLength.cs" />
     <Compile Include="Functions\ChangeLanguage.cs" />
+    <Compile Include="Functions\ConvertListToString.cs" />
     <Compile Include="Functions\CountUniqueWords.cs" />
     <Compile Include="Functions\CountWords.cs" />
     <Compile Include="Consol\ConsolInput.cs" />
     <Compile Include="Consol\ConsolOutput.cs" />
-    <Compile Include="Functions\ReadTXTDocument.cs" />
+    <Compile Include="Functions\ReadTXT.cs" />
+    <Compile Include="Functions\SortTextColor.cs" />
     <Compile Include="Main\Program.cs" />
     <Compile Include="Parameter\IsDictionary.cs" />
     <Compile Include="Parameter\IsDisplay.cs" />
@@ -62,6 +65,7 @@
     <Compile Include="Functions\RemoveSpecialCharacter.cs" />
     <Compile Include="Functions\RemoveStopWords.cs" />
     <Compile Include="Functions\SplitSentence.cs" />
+    <Compile Include="SetGet\Variable.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -74,6 +78,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="test.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Mary.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

@@ -11,14 +11,14 @@ namespace WordCount.Parameter
     {
         public static string IsTXTAdress(string[] args)
         {
-            string sentence = null;
+            string sentencePath = null;
             foreach (var arg in args)
             {
                 if (arg.EndsWith(".txt") == true && arg.StartsWith("-dictionary") == false && arg.StartsWith("-stopwordlist") == false && arg.StartsWith("-texturl") == false)
                 {
                     if (File.Exists(arg))
                     {
-                        sentence = File.ReadAllText(arg);
+                        sentencePath = (arg);
                     }
                     else
                     {
@@ -26,7 +26,7 @@ namespace WordCount.Parameter
                     }
                 }
             }
-            return sentence;
+            return sentencePath;
         }
     }
 }
